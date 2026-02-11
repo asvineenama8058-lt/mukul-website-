@@ -1,0 +1,60 @@
+body {
+  font-family: Arial;
+  background: #f4f6f9;
+  text-align: center;
+}
+
+header {
+  background: #111;
+  padding: 15px;
+}
+
+header h1 {
+  color: white;
+}
+
+nav a {
+  color: white;
+  margin: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  margin-top: 100px;
+}
+
+.btn {
+  padding: 12px 25px;
+  background: #28a745;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+input {
+  width: 90%;
+  max-width: 300px;
+  padding: 10px;
+  margin: 8px;
+}
+
+button {
+  padding: 12px 30px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.qr {
+  width: 260px;
+}
+
+.invoice {
+  background: white;
+  padding: 20px;
+  margin: auto;
+  max-width: 350px;
+  border-radius: 10px;
+}

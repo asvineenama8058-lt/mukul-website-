@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Repair & Service Request</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{font-family:Arial;background:#f4f6fb;margin:0}
+header{background:#0d47a1;color:white;text-align:center;padding:15px}
+.card{background:white;margin:10px;padding:15px;border-radius:8px}
+label{display:block;margin:6px 0;font-size:15px}
+input,textarea{width:100%;padding:10px;margin:6px 0;border-radius:5px;border:1px solid #ccc}
+button{background:#0d47a1;color:white;padding:12px;border:none;border-radius:6px;font-size:16px;width:100%}
+</style>
+</head>
+<body>
+
+<header>
+<h2>🛠 Repair & Complaint Form</h2>
+<p>Mukul Electronics & Electricals</p>
+</header>
+
+<div class="card">
+
+<h3>Select Instrument for Repair</h3>
+
+<label><input type="checkbox" value="Fridge"> Fridge</label>
+<label><input type="checkbox" value="Washing Machine"> Washing Machine</label>
+<label><input type="checkbox" value="RO (Water Purifier)"> RO (Water Purifier)</label>
+<label><input type="checkbox" value="Water Geyser"> Water Geyser</label>
+<label><input type="checkbox" value="Inverter"> Inverter</label>
+<label><input type="checkbox" value="Battery"> Battery</label>
+<label><input type="checkbox" value="AC"> Air Conditioner (AC)</label>
+<label><input type="checkbox" value="Cooler"> Cooler</label>
+<label><input type="checkbox" value="Fan"> Fan</label>
+<label><input type="checkbox" value="Mixer Grinder"> Mixer Grinder</label>
+<label><input type="checkbox" value="Other"> Other</label>
+
+<h3>Customer Details</h3>
+
+<input id="name" placeholder="Your Name" required>
+<input id="phone" placeholder="Phone Number" required>
+<textarea id="address" placeholder="Your Address"></textarea>
+<textarea id="problem" placeholder="Describe the problem"></textarea>
+
+<button onclick="sendRepair()">Submit Repair Request</button>
+
+</div>
+
+<script>
+function sendRepair(){
+let items=[];
+document.querySelectorAll('input[type=checkbox]:checked').forEach(i=>items.push(i.value));
+
+let msg=`Repair Request:
+Name: ${name.value}
+Phone: ${phone.value}
+Address: ${address.value}
+Instruments: ${items.join(", ")}
+Problem: ${problem.value}`;
+
+window.open("https://wa.me/918739977959?text="+encodeURIComponent(msg));
+}
+</script>
+
+</body>
+</html>
